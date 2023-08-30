@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash": "^4.14.197",
+    "pino-pretty": "^10.2.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.0.4",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/jwt": "^7.2.0",
+    "@typegoose/typegoose": "^11.4.1",
+    "argon2": "^0.31.0",
+    "crypto-js": "^4.1.1",
+    "fastify": "^4.22.0",
+    "fastify-zod": "^1.4.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.5.0",
+    "pino": "^8.15.0",
+    "zod": "^3.22.2"
+  }
+}
