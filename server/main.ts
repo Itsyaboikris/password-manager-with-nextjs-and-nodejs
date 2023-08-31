@@ -1,5 +1,5 @@
 import createServer from "./src/utils/createServer"
-import { disconnectFromDB } from "./src/utils/db"
+import { connectToDB, disconnectFromDB } from "./src/utils/db"
 import logger from "./src/utils/logger"
 import {FastifyInstance}  from 'fastify'
 
@@ -28,6 +28,8 @@ async function main() {
 		})
 
 		logger.info(`server is ready at ${url}`)
+
+		await connectToDB()
 	} catch (e) {
 		logger.error(e)
 		process.exit(1)
