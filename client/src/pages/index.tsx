@@ -36,7 +36,7 @@ export default function Home() {
 	return (
 		<main className={`flex min-h-screen flex-col items-center justify-between p-24`}>
 			{step === 'register' && <RegisterForm setStep={setStep} setVaultKey={setVaultKey}/>}
-			{step === 'login' && <LoginForm/>}
+			{step === 'login' && <LoginForm setVault={setVault} setStep={setStep} setVaultKey={setVaultKey}/>}
 			{step === 'vault' && <Vault vault={vault} vaultKey={vaultKey}/>}
 		</main>
 	)

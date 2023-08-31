@@ -14,9 +14,9 @@ export function generateVaultKey({
 }
 
 export function decryptVault({ vaultKey, vault }: { vaultKey: string; vault: string; }) {
+	console.log("key", vaultKey, vault)
 	const bytes = AES.decrypt(vault, vaultKey);
 	const decrypted = bytes.toString(enc.Utf8);
-  
 	try {
 	  return JSON.parse(decrypted).vault;
 	} catch (e) {
